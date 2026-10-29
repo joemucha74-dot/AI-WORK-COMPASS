@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101828">
+  <meta name="description" content="A practical 90-day roadmap for starting in AI data annotation and remote data work. Track your progress, publish useful guides, and build a trusted resource.">
+  <title>AI Work Compass — Your 90-Day Roadmap</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="AI Work Compass home">
+      <span class="brand-mark" aria-hidden="true">↗</span>
+      <span>AI Work <strong>Compass</strong></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="mainNav" aria-label="Main navigation">
+      <a href="#roadmap">Roadmap</a>
+      <a href="#articles">Content planner</a>
+      <a href="#metrics">Metrics</a>
+      <a href="#resources">Resources</a>
+    </nav>
+    <button class="button button-small button-outline" id="exportBtn">Export progress ↗</button>
+  </header>
+
+  <main id="main">
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR 90-DAY BUILD PLAN</div>
+        <h1>Turn your AI work experience into a <em>useful online resource.</em></h1>
+        <p class="hero-lede">A clear, practical roadmap to help beginners understand data annotation, find legitimate remote opportunities, and learn from real experience—not hype.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#roadmap">Start your roadmap <span aria-hidden="true">→</span></a>
+          <a class="button button-quiet" href="#articles">Plan your first article</a>
+        </div>
+        <div class="trust-note"><span class="check-icon">✓</span> Built around helpful content, honest reviews, and sustainable growth.</div>
+      </div>
+      <div class="hero-visual" aria-label="90-day progress illustration">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="planet planet-main"><span>90</span><small>DAYS</small></div>
+        <div class="float-card float-card-top"><span class="float-icon violet">✦</span><span><strong>20 articles</strong><small>Publishing target</small></span></div>
+        <div class="float-card float-card-bottom"><span class="float-icon green">↗</span><span><strong>Build trust first</strong><small>Growth that compounds</small></span></div>
+        <div class="star star-a">✦</div><div class="star star-b">✧</div><div class="star star-c">·</div>
+      </div>
+    </section>
+
+    <section class="stats-strip section-wrap" aria-label="Plan targets">
+      <div class="stat"><span class="stat-number">90</span><span class="stat-label">days to build your base</span></div>
+      <div class="stat"><span class="stat-number">20</span><span class="stat-label">helpful articles to publish</span></div>
+      <div class="stat"><span class="stat-number">10h</span><span class="stat-label">weekly planning assumption</span></div>
+      <div class="stat"><span class="stat-number">4</span><span class="stat-label">numbers to track each week</span></div>
+    </section>
+
+    <section class="section-wrap section-block" id="roadmap">
+      <div class="section-heading">
+        <div><div class="eyebrow">THE GAME PLAN</div><h2>Your roadmap, <em>week by week.</em></h2><p>Check off tasks as you complete them. Your progress is saved in this browser.</p></div>
+        <div class="progress-widget"><div class="progress-top"><span>Overall progress</span><strong id="progressText">0%</strong></div><div class="progress-track"><span id="progressBar"></span></div><small id="progressDetail">0 of 24 milestones complete</small></div>
+      </div>
+      <div class="roadmap-layout">
+        <div class="timeline" id="timeline" aria-label="Roadmap milestones"></div>
+        <aside class="side-note">
+          <div class="note-icon">✦</div><h3>Keep it honest.</h3>
+          <p>Share your process and personal experience, but never publish confidential project details, private prompts, client data, or anything prohibited by a platform’s terms.</p>
+          <div class="note-divider"></div>
+          <h4>Two important checkpoints</h4>
+          <p><strong>Week 6:</strong> If fewer than 8 articles are live, reduce scope—not quality.</p>
+          <p><strong>Week 12:</strong> Focus on the channel that produced the most clicks or signups.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-wrap section-block" id="articles">
+      <div class="section-heading">
+        <div><div class="eyebrow">PUBLISH WITH PURPOSE</div><h2>Your content <em>planner.</em></h2><p>Prioritize reviews and comparisons, then connect them to beginner-friendly guides.</p></div>
+        <div class="mini-count"><strong id="articleCount">0/20</strong><span>articles published</span></div>
+      </div>
+      <div class="filter-row">
+        <div class="filter-tabs" role="group" aria-label="Filter articles">
+          <button class="filter-tab active" data-filter="all">All topics <span>20</span></button>
+          <button class="filter-tab" data-filter="High">High priority <span>8</span></button>
+          <button class="filter-tab" data-filter="Medium">Medium <span>8</span></button>
+          <button class="filter-tab" data-filter="Low">Low <span>4</span></button>
+        </div>
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="articleSearch" type="search" placeholder="Search topics…" aria-label="Search article topics"></label>
+      </div>
+      <div class="article-grid" id="articleGrid"></div>
+      <p class="editorial-note"><strong>Publishing tip:</strong> Aim for 1,200–2,000 words, answer the main question near the top, include your own non-confidential screenshots where useful, and link to related articles.</p>
+    </section>
+
+    <section class="section-wrap section-block metrics-section" id="metrics">
+      <div class="section-heading">
+        <div><div class="eyebrow">MEASURE WHAT MATTERS</div><h2>Your weekly <em>pulse check.</em></h2><p>Enter your latest numbers once a week. These values stay on this device unless you export them.</p></div>
+        <button class="button button-outline" id="resetMetrics">Reset metrics</button>
+      </div>
+      <div class="metric-cards">
+        <label class="metric-card"><span class="metric-symbol symbol-purple">✎</span><span class="metric-label">Articles published</span><input type="number" min="0" step="1" id="metricArticles" value="0"><small>Target: 20 in 90 days</small></label>
+        <label class="metric-card"><span class="metric-symbol symbol-blue">⌁</span><span class="metric-label">Search impressions</span><input type="number" min="0" step="1" id="metricImpressions" value="0"><small>Check Google Search Console</small></label>
+        <label class="metric-card"><span class="metric-symbol symbol-green">✉</span><span class="metric-label">Email signups</span><input type="number" min="0" step="1" id="metricSignups" value="0"><small>Offer a useful free checklist</small></label>
+        <label class="metric-card"><span class="metric-symbol symbol-orange">↗</span><span class="metric-label">Affiliate clicks</span><input type="number" min="0" step="1" id="metricClicks" value="0"><small>Disclose links clearly</small></label>
+      </div>
+      <div class="metrics-footer"><span class="save-indicator"><span class="save-dot"></span> <span id="saveStatus">Saved locally</span></span><button class="text-button" id="downloadCsv">Download metrics CSV ↓</button></div>
+    </section>
+
+    <section class="section-wrap section-block" id="resources">
+      <div class="section-heading">
+        <div><div class="eyebrow">SET YOUR FOUNDATION</div><h2>Launch checklist.</h2><p>Before publishing, make the site trustworthy, fast, and easy to navigate.</p></div>
+      </div>
+      <div class="resource-layout">
+        <div class="resource-list" id="setupChecklist">
+          <label><input type="checkbox" data-setup="domain"> <span><strong>Choose a broad, memorable domain</strong><small>Avoid building the brand around one platform’s name.</small></span></label>
+          <label><input type="checkbox" data-setup="hosting"> <span><strong>Set up hosting and SSL</strong><small>Choose a host that supports your payment method and budget.</small></span></label>
+          <label><input type="checkbox" data-setup="theme"> <span><strong>Choose a lightweight theme</strong><small>Keep pages fast; avoid unnecessary visual clutter.</small></span></label>
+          <label><input type="checkbox" data-setup="trust"> <span><strong>Publish trust pages</strong><small>About, Contact, Privacy Policy, and Affiliate Disclosure.</small></span></label>
+          <label><input type="checkbox" data-setup="analytics"> <span><strong>Connect search and analytics tools</strong><small>Set up Google Search Console and analytics from day one.</small></span></label>
+          <label><input type="checkbox" data-setup="email"> <span><strong>Create a useful email freebie</strong><small>Example: a beginner’s 7-day data annotation checklist.</small></span></label>
+        </div>
+        <div class="resource-card">
+          <div class="resource-card-top"><span class="resource-icon">↗</span><span class="tag">MONETIZATION</span></div>
+          <h3>Build income in layers.</h3>
+          <div class="income-step"><span>01</span><div><strong>Affiliate links</strong><p>Recommend only tools or services you’ve used or carefully checked.</p></div></div>
+          <div class="income-step"><span>02</span><div><strong>Email list</strong><p>Give readers a reason to return, independent of search traffic.</p></div></div>
+          <div class="income-step"><span>03</span><div><strong>Display ads</strong><p>Apply when the site has solid content and complete trust pages; approval is not guaranteed.</p></div></div>
+          <div class="income-step"><span>04</span><div><strong>Your own product</strong><p>Test demand for a starter guide, resume template, or QA checklist.</p></div></div>
+          <p class="disclaimer">Income is not guaranteed. Program terms, eligibility, and payout rules can change; verify before relying on them.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-cta section-wrap">
+      <div class="cta-spark">✦</div><div><div class="eyebrow">ONE STEP AT A TIME</div><h2>Make something genuinely <em>helpful.</em></h2><p>Useful content, real experience, and consistency are the foundation. Start with one article and improve from there.</p></div>
+      <a class="button button-light" href="#articles">Choose an article →</a>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand brand-footer" href="#home"><span class="brand-mark">↗</span><span>AI Work <strong>Compass</strong></span></a><span>Practical guidance for the AI data work journey.</span><a href="#home">Back to top ↑</a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
